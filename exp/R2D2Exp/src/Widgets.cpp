@@ -12,7 +12,6 @@
 
 
 
-
 Widgets::Widgets() {
 
 }
@@ -36,6 +35,10 @@ void Widgets::init() {
 	lv_obj_add_style(xTV, &xStyleTile, 0);
 
 	xPixels.init(xTV);
+	//xKnitt.init(xTV);
+	//xScan.init(xTV);
+	//xScan.showHorizontal(false);
+	//xScan.setColor(lv_color_hex(0x005000));
 
 }
 

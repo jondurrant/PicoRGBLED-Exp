@@ -13,6 +13,8 @@
 #include "src/misc/lv_area.h"
 #include "pico/stdlib.h"
 #include "ComputePixels.h"
+#include "Knitt.h"
+#include "Scan.h"
 
 
 #define LED_SERIES 10
@@ -39,6 +41,8 @@ private:
 	lv_timer_t * pTimer;
 
 	ComputePixels xPixels;
+	Knitt xKnitt;
+	Scan xScan;
 
 
 

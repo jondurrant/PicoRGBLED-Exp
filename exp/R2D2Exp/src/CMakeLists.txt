@@ -2,6 +2,9 @@ add_executable(${NAME}
         main.cpp
         Widgets.cpp
         ComputePixels.cpp
+        Knitt.cpp
+        Scan.cpp
+        Pattern.cpp
         )
 
 # Pull in our pico_stdlib which pulls in commonly used features
