@@ -15,6 +15,7 @@
 #include "ComputePixels.h"
 #include "Knitt.h"
 #include "Scan.h"
+#include "Direction.h"
 
 
 #define LED_SERIES 10
@@ -43,6 +44,9 @@ private:
 	ComputePixels xPixels;
 	Knitt xKnitt;
 	Scan xScan;
+	Direction xDirection;
+
+	uint8_t xStep = 0;
 
 
 

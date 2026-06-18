@@ -5,6 +5,7 @@ add_executable(${NAME}
         Knitt.cpp
         Scan.cpp
         Pattern.cpp
+        Direction.cpp
         )
 
 # Pull in our pico_stdlib which pulls in commonly used features

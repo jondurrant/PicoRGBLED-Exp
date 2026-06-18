@@ -27,7 +27,7 @@ void Pattern::buildCanvas(lv_obj_t * parent){
 	uint ver = lv_disp_get_ver_res(NULL);
 
 	pCanvas = lv_canvas_create(parent);
-	lv_color_t *buf = (lv_color_t *)pvPortMalloc(hor * ver * sizeof(lv_color_t));
+	lv_color_t *buf = (lv_color_t *)pvPortMalloc(hor * ver * 4);//  sizeof(lv_color_t));
 	if (buf) {
 		lv_canvas_set_buffer(pCanvas, buf, hor, ver, LV_COLOR_FORMAT_ARGB8888);
 		lv_obj_set_size(pCanvas, hor, ver);
