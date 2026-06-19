@@ -11,7 +11,7 @@
 
 #include <PicoLed.hpp>
 
-#define LED_PIN 2
+#define LED_PIN 6
 #define LED_LENGTH (16*10)
 
 

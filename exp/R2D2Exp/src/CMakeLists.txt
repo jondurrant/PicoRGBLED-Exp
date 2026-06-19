@@ -6,6 +6,8 @@ add_executable(${NAME}
         Scan.cpp
         Pattern.cpp
         Direction.cpp
+        Scroll.cpp
+        Pride.cpp
         )
 
 # Pull in our pico_stdlib which pulls in commonly used features

@@ -16,7 +16,9 @@ extern "C"{
 #include <PicoLed.hpp>
 #include <cstring>
 
-#define LED_PIN 2
+#ifndef LED_PIN
+#define LED_PIN 6
+#endif
 #define LED_LENGTH (16*10)
 #define BYTES_PER_PIXEL 3
 

@@ -16,6 +16,8 @@
 #include "Knitt.h"
 #include "Scan.h"
 #include "Direction.h"
+#include "Scroll.h"
+#include "Pride.h"
 
 
 #define LED_SERIES 10
@@ -45,6 +47,8 @@ private:
 	Knitt xKnitt;
 	Scan xScan;
 	Direction xDirection;
+	Scroll xScroll;
+	Pride xPride;
 
 	uint8_t xStep = 0;
 

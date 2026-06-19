@@ -40,20 +40,24 @@ void Widgets::init() {
 	 lv_obj_t * tile;
 
 	tile = lv_tileview_add_tile(xTV, 0, 0, LV_DIR_NONE);
-	xPixels.init(tile);
+	lv_obj_clear_flag(tile, LV_OBJ_FLAG_SCROLLABLE);
+	xScroll.init(tile);
 	tile = lv_tileview_add_tile(xTV, 0, 1, LV_DIR_NONE);
 	xKnitt.init(tile);
 	tile = lv_tileview_add_tile(xTV, 0, 2, LV_DIR_NONE);
 	xScan.init(tile);
-	//xScan.showHorizontal(false);
-	//xScan.setColor(lv_color_hex(0x005000));
+
 	tile = lv_tileview_add_tile(xTV, 0, 3, LV_DIR_NONE);
 	lv_obj_clear_flag(tile, LV_OBJ_FLAG_SCROLLABLE);
 	xDirection.init(tile);
 	xDirection.setSpeedMs(50);
-	//xDirection.setDirection(DIRECTION_RIGHT);
 
-	//lv_tileview_set_tile_by_index(xTV, 0, 1, LV_ANIM_OFF);
+	tile = lv_tileview_add_tile(xTV, 0, 4, LV_DIR_NONE);
+	xPixels.init(tile);
+
+	tile = lv_tileview_add_tile(xTV, 0, 5, LV_DIR_NONE);
+	xPride.init(tile);
+	xPride.setSpeedMs(250);
 
 	pTimer = lv_timer_create(timerCB, 5000,  this);
 }
@@ -105,10 +109,16 @@ void Widgets::timerHandler(lv_timer_t * timer){
 		xDirection.setDirection(DIRECTION_RIGHT);
 		lv_tileview_set_tile_by_index(xTV, 0, 3, LV_ANIM_OFF);
 		break;
+	case 9:
+		lv_tileview_set_tile_by_index(xTV, 0, 4, LV_ANIM_OFF);
+		break;
+	case 10:
+		lv_tileview_set_tile_by_index(xTV, 0, 5, LV_ANIM_OFF);
+		break;
 	}
 
 	xStep ++;
-	if (xStep > 8){
+	if (xStep > 10){
 		xStep = 0;
 	}
 
